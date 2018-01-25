@@ -1,5 +1,44 @@
+@import "import/_normalize";
+
+html,
 body {
+    height: 100%;
+
+    * {
+      box-sizing: border-box;
+    }
+    
+}
+
+body {
+
   .root {
     color: #333;
   }
+
+  .fullscreen-block {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .flex-block {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    &-align-center {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .box {
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    background-color: rgba(32,105,219,.6);
+    border: 1px solid rgba(32,105,219, 1);
+  }
+
 }
