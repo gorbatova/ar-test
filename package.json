@@ -1,0 +1,26 @@
+{
+  "name": "ar-test",
+  "version": "1.0.0",
+  "description": "Тестовое задание",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/mz108/ar-test.git"
+  },
+  "keywords": [
+    "тест"
+  ],
+  "author": "mz",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/mz108/ar-test#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
