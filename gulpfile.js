@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const pug = require('gulp-pug');
 const plumber = require('gulp-plumber');
+const uglify = require('gulp-uglify');
 
 const base_dir = 'src/';
 
@@ -54,9 +55,17 @@ gulp.task('less', function(){
 		.pipe(reload({stream: true}))
 });
 
-gulp.task('watch', ['browser-sync', 'less', 'html'], function(){
+gulp.task('js', function() {
+  return gulp.src(assets.js)
+    .pipe(plumber())
+    .pipe(gulp.dest(base_dir))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('watch', ['browser-sync', 'less', 'html', 'js'], function(){
   gulp.watch(assets.less, ['less']);
   gulp.watch(assets.pug, ['html']);
+  gulp.watch(assets.js, ['js']);
 });
 
 gulp.task('default', ['watch']);

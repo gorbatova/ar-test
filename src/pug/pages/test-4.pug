@@ -1,3 +1,9 @@
 extends ../layouts/default.pug
 
 block site__content
+  .video-container
+    video(width="100%", height="600", autoplay='', loop="")
+      source(src="assets/video/SampleVideo_1280x720_20mb.mp4", type="video/mp4")
+      p Ваш браузер не поддерживает видео.
+    .video-block-content.flex-block.flex-block-align-center.flex-block-cols
+      h1 Заголовок к фоновому видео

@@ -1,3 +1,11 @@
 extends ../layouts/default.pug
 
 block site__content
+  .max-height-block#top
+    a(class="return-to-top" id="scrollTopButton" href="#top") Вверх
+  script.
+    window.onscroll = function() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      console.log(scrolled);
+      scrollFunction();
+    };
